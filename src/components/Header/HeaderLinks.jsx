@@ -72,6 +72,7 @@ class HeaderLinks extends React.Component {
             }
           }}
         />
+       
         <Button
           color="white"
           aria-label="edit"

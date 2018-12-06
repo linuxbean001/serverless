@@ -64,6 +64,7 @@ function Header({ ...props }) {
                 color="white"
                 onClick={props.sidebarMinimize}
               >
+               
                 <ViewList className={classes.sidebarMiniIcon} />
               </Button>
             ) : (

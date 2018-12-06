@@ -1,7 +1,7 @@
 import React from "react";
 // react component for creating dynamic tables
 import ReactTable from "react-table";
-import socketIOClient from "socket.io-client";
+//import socketIOClient from "socket.io-client";
 
 
 // @material-ui/core components
@@ -40,7 +40,7 @@ class AssignedTables extends React.Component {
         super(props);
         this.state = {
             events: [],
-            endpoint: "http://localhost:3000/",
+           // endpoint: "http://localhost:3000/",
             showWeb:'',
             showWeb1: ''
            // data: this.state.map((prop, key) => {
@@ -236,23 +236,23 @@ class AssignedTables extends React.Component {
             });
 
          const { endpoint } = this.state;
-         const socket = socketIOClient(endpoint);
+       // socketIOClient         const socket = socketIOClient(endpoint);
         // socket.on("message", data => this.setState({ response: data }));
         // console.log('xxxxxxx x xxxxx', this.state.response);
 
-        socket.on('message',  (data) => { 
+      //  socket.on('message',  (data) => { 
            // let json = JSON.stringify(this.state.showWeb1);
            // console.log(json);
          
-            this.setState({ 
-                showWeb: data.topic,
-                showWeb1: data.message,
+            // this.setState({ 
+            //     showWeb: data.topic,
+            //     showWeb1: data.message,
             
-            });
-            console.log('xxx x x xx topic', this.state.showWeb);
-            console.log('xxx x x xx message', this.state.showWeb1);
+            // });
+            // console.log('xxx x x xx topic', this.state.showWeb);
+            // console.log('xxx x x xx message', this.state.showWeb1);
 
-        });
+       // });
     }
     render() {
         const { classes } = this.props;

@@ -410,7 +410,7 @@ const sidebarStyle = theme => ({
   red: {
     "&,&:hover,&:focus": {
       color: "#FFFFFF",
-      backgroundColor: dangerColor,
+      backgroundColor: dangerColor, 
       boxShadow:
         "0 12px 20px -10px rgba(244,67,54,.28), 0 4px 20px 0 rgba(0,0,0,.12), 0 7px 8px -5px rgba(244,67,54,.2)"
     }
@@ -495,7 +495,29 @@ const sidebarStyle = theme => ({
     "&:hover,&:focus": {
       color: "#FFFFFF"
     }
-  }
+  },
+  myIndextop:{
+    zIndex: "9",
+    background: "#323232"
+  },
+  myIndextop: {
+    zIndex: "9",
+    background: "#323232"
+  },
+  myclass:{
+    maxWidth: "100%",
+    flexBasis: "100%"
+  },
+  myCustomButton: {
+    minWidth:"auto",
+    width: "98px",
+    padding: "12px 27px"
+  },
+  cartBox: {
+    minHeight: "150px",
+background: "#fff",
+textAlign: "center",
+marginTop: "20px" }
 });
 
 export default sidebarStyle;

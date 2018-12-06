@@ -7,7 +7,7 @@ import {
   InfoWindow,
 } from "react-google-maps";
 import PropTypes from "prop-types";
-import socketIOClient from "socket.io-client";
+//import socketIOClient from "socket.io-client";
 
 
 
@@ -37,43 +37,43 @@ class FullScreenMap extends React.Component {
 
   componentDidMount() {
 
-    console.log('xxxx', this.state.url);
+  //  console.log('xxxx', this.state.url);
 
 
-    const { endpoint } = this.state;
-    const socket = socketIOClient(endpoint);
-    socket.on('message', (data) => {
+   // const { endpoint } = this.state;
+   // const socket = socketIOClient(endpoint);
+  //  socket.on('message', (data) => {
 
-      this.setState({
-        topic: data.topic,
-        msg: data.message,
+      // this.setState({
+      //   topic: data.topic,
+      //   msg: data.message,
 
-      });
-
-
-
-      if (this.state.topic.includes('downlink')) {
-
-
-        this.setState({
-          url: 'http://elancethemes.com/28/publishing_company/wp-content/uploads/2018/11/3-stage.gif'
-        })
-        console.log('xxxxx xxxxxxx xxxxxxx 3', this.state.url)
-
-      } else if (this.state.topic.includes('rxinfo')) {
-
-        this.setState({
-          url: 'http://elancethemes.com/28/publishing_company/wp-content/uploads/2018/11/2-stage.gif'
-        })
-
-        console.log('xxxxx xxxxxxx xxxxxxx 2', this.state.url)
-
-      }
+      // });
 
 
 
+      // if (this.state.topic.includes('downlink')) {
 
-    });
+
+      //   this.setState({
+      //     url: 'http://elancethemes.com/28/publishing_company/wp-content/uploads/2018/11/3-stage.gif'
+      //   })
+      //   console.log('xxxxx xxxxxxx xxxxxxx 3', this.state.url)
+
+      // } else if (this.state.topic.includes('rxinfo')) {
+
+      //   this.setState({
+      //     url: 'http://elancethemes.com/28/publishing_company/wp-content/uploads/2018/11/2-stage.gif'
+      //   })
+
+      //   console.log('xxxxx xxxxxxx xxxxxxx 2', this.state.url)
+
+      // }
+
+
+
+
+  //  });
   }
 
   onMarkerClick = () => {

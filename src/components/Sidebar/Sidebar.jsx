@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import '../../customStyle.scss';
+//import '../../customStyle.scss';
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 import { NavLink } from "react-router-dom";
@@ -33,8 +33,8 @@ import Button from "components/CustomButtons/Button.jsx";
 import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Search from "@material-ui/icons/Search";
-import PubSub from 'PubSub';
-const pubsub = new PubSub();
+//import PubSub from 'PubSub';
+//const pubsub = new PubSub();
 var ps;
 
 // We've created this component so we can have a ref to the wrapper of the links that appears in our sidebar.
@@ -54,9 +54,9 @@ class SidebarWrapper extends React.Component {
 
 
 
-    pubsub.subscribe('DATA_MQTT', data => {
-      console.log('xxxxxxxxxxxx xxxxxxxxxxx xxxxxxxxxxxx DATA_MQTT' , data)
-    });
+    // pubsub.subscribe('DATA_MQTT', data => {
+    //   console.log('xxxxxxxxxxxx xxxxxxxxxxx xxxxxxxxxxxx DATA_MQTT' , data)
+    // });
 
 
 
@@ -117,24 +117,24 @@ class Sidebar extends React.Component {
     return this.props.location.pathname.indexOf(routeName) > -1 ? true : false;
   }
 
-  componentDidMount() {
-    setInterval(this.timer, 3000);    
-  }
+  // componentDidMount() {
+  //   setInterval(this.timer, 3000);    
+  // }
 
-  timer = () => {
-    let msg = localStorage.getItem('msg');
+  // timer = () => {
+  //   let msg = localStorage.getItem('msg');
 
-    if (msg){
-      this.setState({
-        msgMac: JSON.parse(msg).mac,
+  //   if (msg){
+  //     this.setState({
+  //       msgMac: JSON.parse(msg).mac,
 
-      })
+  //     })
 
-    }
+  //   }
 
    
    
-  }
+  // }
   openCollapse(collapse) {
     var st = {};
     st[collapse] = !this.state[collapse];
@@ -541,13 +541,13 @@ class Sidebar extends React.Component {
           >
             {brand}
           
-            <Card className="myIndextop">
-              <CardBody>
+            <Card className={classes.myIndextop}>
+              <CardBody >
                 <GridContainer>
-                  <GridItem xs={12} sm={12} md={6}>
+                  <GridItem xs={12} sm={12} md={6} className={classes.myclass}>
                     <div className="loginArea">
-                      <Button className={classes.marginRight}>Sign up</Button>
-                      <Button className={classes.marginRight}>Log in</Button>
+                      <Button className={classes.myCustomButton}>Sign up</Button>
+                      <Button className={classes.myCustomButton}>Log in</Button>
                     </div>
                     <CustomInput
                       rtlActive={rtlActive}
@@ -575,26 +575,26 @@ class Sidebar extends React.Component {
                     </Button>
                     <div className='cardClass'>
                   
-                    <div className={classes.cardContentLeft}>
-                      <Button className={classes.marginRight}>Client</Button>
-                      <Button color="primary" className={classes.marginRight}>
+                    <div>
+                        <Button className={classes.myCustomButton}>Client</Button>
+                        <Button color="primary" className={classes.myCustomButton}>
                         Application
                 </Button>
-                      <Button color="info" className={classes.marginRight}>
+                        <Button color="info" className={classes.myCustomButton} >
                         GateWay
                 </Button>
-                      <Button color="success" className={classes.marginRight}>
+                        <Button color="success" className={classes.myCustomButton} >
                         Technology
                 </Button>
-                      <Button color="warning" className={classes.marginRight}>
+                        <Button color="warning" className={classes.myCustomButton}>
                         Geo Graphy
                 </Button>
-                      <Button color="danger" className={classes.marginRight}>
+                        <Button color="danger" className={classes.myCustomButton}>
                         Status
                 </Button>
 
-                        <div className="cartBox">Alert
-                           {'MAC' + this.state.msgMac} 
+                        <div className={classes.cartBox}>Alert
+                        
                     </div>
                      
                     </div>
@@ -603,7 +603,7 @@ class Sidebar extends React.Component {
                   </GridItem>
                 </GridContainer>
               </CardBody>
-            </Card>
+            </Card> 
                  
             {/* <SidebarWrapper
               className={sidebarWrapper}
