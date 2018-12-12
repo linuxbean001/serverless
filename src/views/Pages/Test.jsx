@@ -1,33 +1,23 @@
 /*eslint-disable*/
-import React from "react";
-
+import Slide from "@material-ui/core/Slide";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
-import Slide from "@material-ui/core/Slide";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogActions from "@material-ui/core/DialogActions";
-
 // @material-ui/icons
 import AddAlert from "@material-ui/icons/AddAlert";
-import Close from "@material-ui/icons/Close";
-
-// core components
-import Heading from "components/Heading/Heading.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import SnackbarContent from "components/Snackbar/SnackbarContent.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import Snackbar from "components/Snackbar/Snackbar.jsx";
-import Instruction from "components/Instruction/Instruction.jsx";
+import notificationsStyle from "assets/jss/material-dashboard-pro-react/views/notificationsStyle.jsx";
 import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
+import GridContainer from "components/Grid/GridContainer.jsx";
+import GridItem from "components/Grid/GridItem.jsx";
+// core components
+import Heading from "components/Heading/Heading.jsx";
+import SnackbarContent from "components/Snackbar/SnackbarContent.jsx";
+import React from "react";
 
-import notificationsStyle from "assets/jss/material-dashboard-pro-react/views/notificationsStyle.jsx";
 
-import noticeModal1 from "assets/img/card-1.jpeg";
-import noticeModal2 from "assets/img/card-2.jpeg";
+
+
+
 
 function Transition(props) {
     return <Slide direction="down" {...props} />;
@@ -96,7 +86,6 @@ class Notifications extends React.Component {
                                     <h4 className={classes.cardTitle}>Node</h4>
                                 </div>
                                 <br />
-                               
                                 <SnackbarContent
                                     message={
                                         "Node Notifacation"
@@ -105,8 +94,26 @@ class Notifications extends React.Component {
                                     icon={AddAlert}
                                     color="info"
                                 />
-                               
-                               
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                    <GridItem xs={12} sm={12} md={6}>
+                        <Card>
+                            <CardBody>
+                                <div className={classes.cardHeader}>
+                                    <h4 className={classes.cardTitle}>Node</h4>
+                                </div>
+                                <br />
+
+                                <SnackbarContent
+                                    message={
+                                        "Node Notifacation"
+                                    }
+                                    close
+                                    icon={AddAlert}
+                                    color="info"
+                                />
+
                             </CardBody>
                         </Card>
                     </GridItem>
@@ -127,6 +134,27 @@ class Notifications extends React.Component {
                                         color="warning"
                                     />
                                    
+                                </div>
+                            </CardBody>
+                        </Card>
+                    </GridItem>
+                    <GridItem xs={12} sm={12} md={6}>
+                        <Card>
+                            <CardBody>
+                                <div>
+                                    <div className={classes.cardHeader}>
+                                        <h4 className={classes.cardTitle}>GateWay</h4>
+                                    </div>
+                                    <br />
+                                    <SnackbarContent
+                                        message={
+                                            "GateWay Notifacation"
+                                        }
+                                        close
+                                        icon={AddAlert}
+                                        color="warning"
+                                    />
+
                                 </div>
                             </CardBody>
                         </Card>

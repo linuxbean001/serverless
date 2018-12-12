@@ -513,12 +513,75 @@ class Sidebar extends React.Component {
             }}
           >
             {brand}
-            <SidebarWrapper
+            {/* <SidebarWrapper
               className={sidebarWrapper}
               user={user}
               headerLinks={<HeaderLinks rtlActive={rtlActive} />}
               links={links}
-            />
+            /> */}
+            <Card className={classes.myIndextop}>
+              <CardBody className={sidebarWrapper}>
+                <GridContainer>
+                  <GridItem xs={12} sm={12} md={6} className={classes.myclass}>
+                    <div className="loginArea">
+                      <Button className={classes.myCustomButton}>Sign up</Button>
+                      <Button className={classes.myCustomButton}>Log in</Button>
+                    </div>
+                    <CustomInput
+                      rtlActive={rtlActive}
+                      formControlProps={{
+                        className: classes.top + " " + classes.search
+                      }}
+                      inputProps={{
+                        placeholder: rtlActive ? "بحث" : "Search",
+                        inputProps: {
+                          "aria-label": rtlActive ? "بحث" : "Search",
+                          className: classes.searchInput
+                        }
+                      }}
+                    />
+                    <Button
+                      color="white"
+                      aria-label="edit"
+                      justIcon
+                      round
+                      className={searchButton}
+                    >
+                      <Search
+                        className={classes.headerLinksSvg + " " + classes.searchIcon}
+                      />
+                    </Button>
+                    <div className='cardClass'>
+
+                      <div>
+                        <Button className={classes.myCustomButton}>Client</Button>
+                        <Button color="primary" className={classes.myCustomButton}>
+                          Application
+                </Button>
+                        <Button color="info" className={classes.myCustomButton} >
+                          GateWay
+                </Button>
+                        <Button color="success" className={classes.myCustomButton} >
+                          Technology
+                </Button>
+                        <Button color="warning" className={classes.myCustomButton}>
+                          Geo Graphy
+                </Button>
+                        <Button color="danger" className={classes.myCustomButton}>
+                          Status
+                </Button>
+
+                    <div className={classes.cartBox}>
+                      Alert
+                    </div>
+
+                      </div>
+
+                    </div>
+                  </GridItem>
+                </GridContainer>
+              </CardBody>
+            </Card> 
             {image !== undefined ? (
               <div
                 className={classes.background}
@@ -541,8 +604,8 @@ class Sidebar extends React.Component {
           >
             {brand}
           
-            <Card className={classes.myIndextop}>
-              <CardBody >
+             <Card className={classes.myIndextop}>
+              <CardBody className={sidebarWrapper}>
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={6} className={classes.myclass}>
                     <div className="loginArea">
@@ -612,12 +675,12 @@ class Sidebar extends React.Component {
             /> */}
 
           
-            {/* {image !== undefined ? (
+            {image !== undefined ? (
               <div
                 className={classes.background}
                 style={{ backgroundImage: "url(" + image + ")" }}
               />
-            ) : null} */}
+            ) : null}
           </Drawer>
         </Hidden>
       </div>

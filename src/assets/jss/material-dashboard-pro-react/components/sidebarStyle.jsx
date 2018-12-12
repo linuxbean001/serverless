@@ -502,7 +502,7 @@ const sidebarStyle = theme => ({
   },
   myIndextop: {
     zIndex: "9",
-    background: "#323232"
+    background: "transparent"
   },
   myclass:{
     maxWidth: "100%",
@@ -510,14 +510,17 @@ const sidebarStyle = theme => ({
   },
   myCustomButton: {
     minWidth:"auto",
-    width: "98px",
-    padding: "12px 27px"
+    width: "49%",
+    padding: "15px 22px",
+    overflow:"hidden",
+    textOverflow: "-"
+
   },
   cartBox: {
     minHeight: "150px",
-background: "#fff",
-textAlign: "center",
-marginTop: "20px" }
+    background: "#fff",
+    textAlign: "center",
+    marginTop: "20px" }
 });
 
 export default sidebarStyle;
